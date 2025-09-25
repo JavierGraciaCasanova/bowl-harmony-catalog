@@ -1,0 +1,17 @@
+node_modules
+dist
+/.git
+/.venv
+.env
+*.log
+**/*.map
+# keep public directory files available for COPY (do not ignore)
+# public/placeholder.svg
+# public/favicon.ico
+# public/robots.txt
+/.idea
+/.vscode
+*.tgz
+pnpm-lock.yaml
+package-lock.json
+*.local
