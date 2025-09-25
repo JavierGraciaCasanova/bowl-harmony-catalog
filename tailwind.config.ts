@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -84,6 +87,11 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      boxShadow: {
+        'soft': '0 2px 20px -5px hsl(30 8% 15% / 0.08)',
+        'medium': '0 8px 30px -8px hsl(30 8% 15% / 0.12)',
+        'strong': '0 15px 40px -12px hsl(30 8% 15% / 0.15)',
       },
     },
   },

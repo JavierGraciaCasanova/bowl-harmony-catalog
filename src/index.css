@@ -2,41 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Bowl Collection Design System - Minimalist & Elegant */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Neutral base colors */
+    --background: 35 20% 98%;          /* Warm off-white */
+    --foreground: 30 8% 15%;           /* Dark charcoal */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card and surface colors */
+    --card: 40 15% 96%;                /* Soft cream */
+    --card-foreground: 30 8% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 15% 96%;
+    --popover-foreground: 30 8% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary colors - Sage green accent */
+    --primary: 150 25% 35%;            /* Deep sage green */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary colors - Warm beige */
+    --secondary: 40 15% 92%;           /* Light warm beige */
+    --secondary-foreground: 30 8% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted colors */
+    --muted: 35 12% 90%;               /* Soft gray-beige */
+    --muted-foreground: 30 8% 45%;     /* Medium gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent colors - Bright sage for highlights */
+    --accent: 140 35% 55%;             /* Bright sage green */
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive/error colors */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Border and input styling */
+    --border: 35 15% 85%;              /* Subtle warm border */
+    --input: 35 15% 90%;
+    --ring: 150 25% 35%;               /* Focus ring matches primary */
 
-    --radius: 0.5rem;
+    /* Border radius for modern feel */
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -53,44 +60,34 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Product category colors */
+    --category-minimalist: 200 15% 85%;    /* Cool gray for minimalist */
+    --category-colorful: 25 60% 75%;       /* Warm terracotta for colorful */
+    --category-classic: 60 20% 80%;        /* Warm beige for classic */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Special accent colors */
+    --accent-orange: 25 70% 60%;           /* Soft orange accent */
+    --accent-blue: 210 45% 65%;            /* Soft blue accent */
+    
+    /* Text hierarchy */
+    --text-large: 30 8% 12%;               /* Main headings */
+    --text-medium: 30 8% 25%;              /* Subheadings */
+    --text-small: 30 8% 45%;               /* Body text */
+    --text-subtle: 30 8% 65%;              /* Helper text */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(35 20% 98%) 0%, hsl(40 15% 94%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(40 15% 97%) 0%, hsl(35 12% 95%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 20px -5px hsl(30 8% 15% / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(30 8% 15% / 0.12);
+    --shadow-strong: 0 15px 40px -12px hsl(30 8% 15% / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 }
 
@@ -100,6 +97,114 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Typography classes */
+  .text-hero {
+    @apply text-5xl md:text-6xl lg:text-7xl font-light tracking-tight;
+    color: hsl(var(--text-large));
+  }
+
+  .text-heading {
+    @apply text-3xl md:text-4xl font-medium tracking-tight;
+    color: hsl(var(--text-large));
+  }
+
+  .text-subheading {
+    @apply text-xl md:text-2xl font-normal;
+    color: hsl(var(--text-medium));
+  }
+
+  .text-body-large {
+    @apply text-lg leading-relaxed;
+    color: hsl(var(--text-medium));
+  }
+
+  .text-body {
+    @apply text-base leading-relaxed;
+    color: hsl(var(--text-medium));
+  }
+
+  .text-caption {
+    @apply text-sm;
+    color: hsl(var(--text-subtle));
+  }
+
+  /* Button variants */
+  .btn-hero {
+    @apply px-8 py-4 bg-primary text-primary-foreground rounded-xl font-medium hover:shadow-medium;
+    transition: var(--transition-smooth);
+  }
+
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-muted;
+    transition: var(--transition-smooth);
+  }
+
+  /* Product card styling */
+  .product-card {
+    @apply bg-card rounded-2xl overflow-hidden;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+  }
+
+  /* Feature tags */
+  .feature-tag {
+    @apply inline-flex items-center gap-2 px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium;
+  }
+
+  /* Price styling */
+  .price {
+    @apply text-2xl font-semibold;
+    color: hsl(var(--text-large));
+  }
+
+  .price-discount {
+    @apply text-sm text-destructive line-through;
+  }
+}
+
+/* Component animations */
+@layer components {
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
